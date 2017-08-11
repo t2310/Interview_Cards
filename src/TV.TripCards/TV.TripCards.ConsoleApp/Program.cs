@@ -12,11 +12,10 @@ namespace TV.TripCards.ConsoleApp
         static void Main(string[] args)
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<CardSorter>().As<ICardSorter>();
+            builder.RegisterType<CardModule>().As<ICardSorter>();
             builder.RegisterType<CardRepository>().As<ICardRepository>();
-
             var container = builder.Build();
-
+            
             var sorter = container.Resolve<ICardSorter>();
 
             Console.WriteLine($"{Environment.NewLine} **************** {Environment.NewLine}");

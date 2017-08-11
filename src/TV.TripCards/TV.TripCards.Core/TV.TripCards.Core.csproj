@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ICardSorter.cs" />
     <Compile Include="ICardRepository.cs" />
+    <Compile Include="ITestRepository.cs" />
     <Compile Include="Model\Card.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

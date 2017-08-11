@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardSorter.cs" />
+    <Compile Include="CardModule.cs" />
     <Compile Include="Exceptions\CardsCycledException.cs" />
+    <Compile Include="Exceptions\NoCardFoundException.cs" />
+    <Compile Include="Exceptions\NoCardsException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

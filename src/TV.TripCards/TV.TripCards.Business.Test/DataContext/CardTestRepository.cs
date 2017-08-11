@@ -8,7 +8,7 @@ using TV.TripCards.Core.Model;
 
 namespace TV.TripCards.Business.Test.DataContext
 {
-    public class CycledCardTestRepository : ITestRepository
+    public class CardTestRepository : ITestRepository
     {
         public List<Card> GetAll()
         {
@@ -16,14 +16,20 @@ namespace TV.TripCards.Business.Test.DataContext
             {
                 new Card("Москва", "Пекин"),
                 new Card("Пекин", "Самара"),
-                new Card("Калининград", "Москва"),
+                new Card("Калининград", "Каир"),
                 new Card("Самара", "Калининград")
             };
         }
 
         public List<Card> GetExpectedResult()
         {
-            throw new NotImplementedException();
+            return new List<Card>
+            {
+                new Card("Москва", "Пекин"),
+                new Card("Пекин", "Самара"),
+                new Card("Самара", "Калининград"),
+                new Card("Калининград", "Каир"),
+            };
         }
     }
 }

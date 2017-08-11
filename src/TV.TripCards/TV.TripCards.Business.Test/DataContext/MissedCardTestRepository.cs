@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TV.TripCards.Core;
 using TV.TripCards.Core.Model;
 
-namespace TV.TripCards.Data.Mock
+namespace TV.TripCards.Business.Test.DataContext
 {
-    /// <summary>
-    /// Мок репозиторий для получения перепутнных карточек
-    /// </summary>
-    public class CardRepository : ICardRepository
+    class MissedCardTestRepository : ITestRepository
     {
         public List<Card> GetAll()
         {
@@ -17,8 +18,13 @@ namespace TV.TripCards.Data.Mock
                 new Card("Пекин", "Самара"),
                 new Card("Калининград", "Каир"),
                 new Card("Самара", "Калининград"),
-                new Card("Каир", "Сочи")
+                new Card("Кипр", "Берлин")
             };
+        }
+
+        public List<Card> GetExpectedResult()
+        {
+            throw new NotImplementedException();
         }
     }
 }
